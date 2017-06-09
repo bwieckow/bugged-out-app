@@ -1,1 +1,1 @@
-# angular2skeleton-app
+# angular2bug-log-application
