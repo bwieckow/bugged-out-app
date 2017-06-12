@@ -13,14 +13,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 //The oposite of share module is CoreModule
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
+var status_pipe_1 = require('./pipe/status.pipe');
+var severity_pipe_1 = require('./pipe/severity.pipe');
 var SharedModule = (function () {
     function SharedModule() {
     }
     SharedModule = __decorate([
         core_1.NgModule({
             imports: [common_1.CommonModule],
-            declarations: [],
-            exports: [common_1.CommonModule] //Exports everything we want to be available 'across the app'
+            declarations: [
+                status_pipe_1.StatusPipe,
+                severity_pipe_1.SeverityPipe
+            ],
+            exports: [
+                common_1.CommonModule,
+                status_pipe_1.StatusPipe,
+                severity_pipe_1.SeverityPipe
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], SharedModule);

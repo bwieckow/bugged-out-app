@@ -2,38 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a044dfe7-2169-4b9b-95d2-1e260f010c30" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/angular2-bugged-out-11-asset-buggedout-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/app-routing.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/bugs/bug-routing.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/bugs/bug.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/bugs/model/bug.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/bugs/service/bug.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/core/constant/constants.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/core/core.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/core/service/firebase-config.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/navbar/navbar.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/navbar/navbar.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/navbar/navbar.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/shared/shared.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/shared/validation/forbidden-string.validator.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.js" afterPath="$PROJECT_DIR$/app/app.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.js.map" afterPath="$PROJECT_DIR$/app/app.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.ts" afterPath="$PROJECT_DIR$/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.module.js" afterPath="$PROJECT_DIR$/app/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.module.js.map" afterPath="$PROJECT_DIR$/app/app.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.module.ts" afterPath="$PROJECT_DIR$/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/systemjs.config.js" afterPath="$PROJECT_DIR$/systemjs.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/shared/constant/constants.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/shared/pipe/severity.pipe.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/shared/pipe/status.pipe.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.css" afterPath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.html" afterPath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.js" afterPath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.js.map" afterPath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.ts" afterPath="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.css" afterPath="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.html" afterPath="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/shared/shared.module.js" afterPath="$PROJECT_DIR$/app/shared/shared.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/shared/shared.module.js.map" afterPath="$PROJECT_DIR$/app/shared/shared.module.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/shared/shared.module.ts" afterPath="$PROJECT_DIR$/app/shared/shared.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles.css" afterPath="$PROJECT_DIR$/styles.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,30 +39,48 @@
               <folding>
                 <element signature="e#25#66#0" expanded="true" />
                 <element signature="e#247#312#0" expanded="true" />
-                <marker date="1496666917908" expanded="true" signature="459:894" ph="{...}" />
-                <marker date="1496666917908" expanded="true" signature="920:924" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bug.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bugs/service/bug.service.ts">
+      <file leaf-file-name="shared.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/shared/shared.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+            <state relative-caret-position="352">
+              <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#194#233#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bug-list.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bug-list.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="706">
-              <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+            <state relative-caret-position="24">
+              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bug-list.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bug-detail.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -88,11 +89,41 @@
       <file leaf-file-name="bug-detail.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1150">
-              <caret line="77" column="51" lean-forward="false" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
+            <state relative-caret-position="248">
+              <caret line="75" column="9" lean-forward="false" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bug-detail.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="64" lean-forward="true" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bug-list.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,6 +138,11 @@
         <option value="TypeScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bugform</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -137,8 +173,6 @@
         <option value="$PROJECT_DIR$/app/navbar/navbar.component.css" />
         <option value="$PROJECT_DIR$/app/navbar/navbar.component.html" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.css" />
-        <option value="$PROJECT_DIR$/app/shared/shared.module.ts" />
         <option value="$PROJECT_DIR$/app/app.module.ts" />
         <option value="$PROJECT_DIR$/app/core/constant/constants.ts" />
         <option value="$PROJECT_DIR$/app/core/core.module.ts" />
@@ -147,17 +181,23 @@
         <option value="$PROJECT_DIR$/app/app.component.ts" />
         <option value="$PROJECT_DIR$/app/core/service/firebase-config.service.ts" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/styles.css" />
         <option value="$PROJECT_DIR$/app/bugs/bug.module.ts" />
         <option value="$PROJECT_DIR$/app/shared/validation/forbidden-string.validator.ts" />
-        <option value="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.css" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.html" />
-        <option value="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.html" />
         <option value="$PROJECT_DIR$/app/bugs/model/bug.ts" />
-        <option value="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.ts" />
         <option value="$PROJECT_DIR$/app/bugs/service/bug.service.ts" />
         <option value="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.ts" />
+        <option value="$PROJECT_DIR$/app/shared/constant/constant.ts" />
+        <option value="$PROJECT_DIR$/app/shared/pipe/status.pipe.ts" />
+        <option value="$PROJECT_DIR$/app/shared/constant/constants.ts" />
+        <option value="$PROJECT_DIR$/app/shared/pipe/severity.pipe.ts" />
+        <option value="$PROJECT_DIR$/app/shared/shared.module.ts" />
+        <option value="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.ts" />
+        <option value="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.html" />
+        <option value="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.css" />
+        <option value="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.html" />
+        <option value="$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.css" />
+        <option value="$PROJECT_DIR$/styles.css" />
       </list>
     </option>
   </component>
@@ -274,6 +314,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="validation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bugged-out-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bugged-out-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pipe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bugged-out-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bugged-out-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="constant" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -807,12 +891,12 @@
       <option name="presentableId" value="Default" />
       <updated>1496005227782</updated>
       <workItem from="1496005229384" duration="27097000" />
-      <workItem from="1496403075458" duration="23925000" />
+      <workItem from="1496403075458" duration="31431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51022000" />
+    <option name="totallyTimeSpent" value="58528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -883,6 +967,12 @@
         <option value="$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.js" />
         <option value="$PROJECT_DIR$/app/shared/validation/forbidden-string.validator.js" />
         <option value="$PROJECT_DIR$/app/shared/validation/forbidden-string.validator.js.map" />
+        <option value="$PROJECT_DIR$/app/shared/constant/constants.js.map" />
+        <option value="$PROJECT_DIR$/app/shared/constant/constants.js" />
+        <option value="$PROJECT_DIR$/app/shared/pipe/status.pipe.js.map" />
+        <option value="$PROJECT_DIR$/app/shared/pipe/status.pipe.js" />
+        <option value="$PROJECT_DIR$/app/shared/pipe/severity.pipe.js" />
+        <option value="$PROJECT_DIR$/app/shared/pipe/severity.pipe.js.map" />
       </list>
     </option>
   </component>
@@ -939,8 +1029,6 @@
           <folding>
             <element signature="e#25#66#0" expanded="true" />
             <element signature="e#247#312#0" expanded="true" />
-            <marker date="1496666917908" expanded="true" signature="459:894" ph="{...}" />
-            <marker date="1496666917908" expanded="true" signature="920:924" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1006,13 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/shared/shared.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1092,27 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bugs/bug.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="e#25#66#0" expanded="true" />
-            <element signature="e#247#312#0" expanded="true" />
-            <marker date="1496666917908" expanded="true" signature="459:894" ph="{...}" />
-            <marker date="1496666917908" expanded="true" signature="920:924" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1124,34 +1184,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bugs/model/bug.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="41" column="1" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1174,18 +1210,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.html">
+    <entry file="file://$PROJECT_DIR$/app/bugs/bug.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="374">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <element signature="e#25#66#0" expanded="true" />
+            <element signature="e#247#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/shared/constant/constants.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/shared/pipe/status.pipe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/shared/shared.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding>
+            <element signature="e#194#233#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="77" column="51" lean-forward="false" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
+        <state relative-caret-position="248">
+          <caret line="75" column="9" lean-forward="false" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>
@@ -1194,8 +1261,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+        <state relative-caret-position="24">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/shared/pipe/severity.pipe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bugs/bug-detail/bug-detail.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="64" lean-forward="true" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bugs/bug-list/bug-list.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
           <folding />
         </state>
       </provider>
