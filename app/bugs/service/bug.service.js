@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var firebase_config_service_1 = require('../../core/service/firebase-config.service');
-var observable_1 = require("rxjs/observable");
+var rxjs_1 = require("rxjs");
 var BugService = (function () {
     //brackets points to root
     function BugService(fireService) {
@@ -19,7 +19,7 @@ var BugService = (function () {
     }
     BugService.prototype.getAddedBugs = function () {
         var _this = this;
-        return observable_1.Observable.create(function (obs) {
+        return rxjs_1.Observable.create(function (obs) {
             _this.bugsDbRef.on('child_added', function (bug) {
                 var newBug = bug.val();
                 newBug.id = bug.key;
@@ -31,7 +31,7 @@ var BugService = (function () {
     };
     BugService.prototype.changedListener = function () {
         var _this = this;
-        return observable_1.Observable.create(function (obs) {
+        return rxjs_1.Observable.create(function (obs) {
             _this.bugsDbRef.on('child_changed', function (bug) {
                 var updatedBug = bug.val();
                 updatedBug.id = bug.key;
