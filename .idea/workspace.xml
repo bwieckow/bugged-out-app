@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a044dfe7-2169-4b9b-95d2-1e260f010c30" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bugs/service/bug.service.ts" afterPath="$PROJECT_DIR$/app/bugs/service/bug.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bugs/service/bug.service.js.map" afterPath="$PROJECT_DIR$/app/bugs/service/bug.service.js.map" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +30,9 @@
       <file leaf-file-name="bug.service.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/bugs/service/bug.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="66">
+              <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -721,12 +719,12 @@
       <option name="presentableId" value="Default" />
       <updated>1496005227782</updated>
       <workItem from="1496005229384" duration="27097000" />
-      <workItem from="1496403075458" duration="43150000" />
+      <workItem from="1496403075458" duration="43312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70247000" />
+    <option name="totallyTimeSpent" value="70409000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1156,11 +1154,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bugs/service/bug.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="66">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
