@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 import { BugService } from '../service/bug.service';
@@ -22,7 +22,7 @@ export class BugDetailComponent implements OnInit{
     private severities = SEVERITY;
     private statusArr: string[] = [];
     private severityArr: string[] = [];
-    @Input() currentBug = new Bug(null, null, this.statuses.Logged, this.severities.Severe, null, null, null, null, null);
+    private currentBug = new Bug(null, null, this.statuses.Logged, this.severities.Severe, null, null, null, null, null);
 
     constructor(private formBuilder: FormBuilder, private bugService: BugService) {
 
@@ -50,10 +50,10 @@ export class BugDetailComponent implements OnInit{
         }
 
         /*this.bugForm = new FormGroup({                                                                            // i means ignore the case
-            title: new FormControl(null, [Validators.required, forbiddenStringValidator(/puppy/i)]),              //The 'title' matches 'formControlName' property in *.html file and so on
-            status: new FormControl(1, Validators.required),                  //'[]' provides an array of validators
-            severity: new FormControl(1, Validators.required),
-            description: new FormControl(null, Validators.required)
+            title: new FormControl(this.currentBug.title, [Validators.required, forbiddenStringValidator(/puppy/i)]),              //The 'title' matches 'formControlName' property in *.html file and so on
+            status: new FormControl(this.currentBug.status, Validators.required),                  //'[]' provides an array of validators
+            severity: new FormControl(this.currentBug.severity, Validators.required),
+            description: new FormControl(this.currentBug.description, Validators.required)
         });*/
         this.bugForm = this.formBuilder.group({
             title: [this.currentBug.title, [Validators.required, forbiddenStringValidator(/puppy/i)]],

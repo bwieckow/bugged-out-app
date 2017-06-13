@@ -1,12 +1,9 @@
 {
   "name": "angular2-skeleton",
   "version": "1.0.0",
-  "description": "Bartek's Angular 2 Skeleton Project",
+  "description": "Bartek's Angular 2 Bug-out Project",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
-    "lite": "lite-server",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    
   },
   "license": "UNLICENSED",
   "repository": {

@@ -1,0 +1,9 @@
+{
+  "hosting": {
+    "public": "bugged-out-d4193",
+    "ignore": [
+      "firebase.json",
+      "**/.*"
+    ]
+  }
+}

@@ -35,10 +35,10 @@ var BugDetailComponent = (function () {
             this.currentBug = new bug_1.Bug(bug.id, bug.title, bug.status, bug.severity, bug.description, bug.createdBy, bug.createdDate, bug.updatedBy, bug.updatedDate);
         }
         /*this.bugForm = new FormGroup({                                                                            // i means ignore the case
-            title: new FormControl(null, [Validators.required, forbiddenStringValidator(/puppy/i)]),              //The 'title' matches 'formControlName' property in *.html file and so on
-            status: new FormControl(1, Validators.required),                  //'[]' provides an array of validators
-            severity: new FormControl(1, Validators.required),
-            description: new FormControl(null, Validators.required)
+            title: new FormControl(this.currentBug.title, [Validators.required, forbiddenStringValidator(/puppy/i)]),              //The 'title' matches 'formControlName' property in *.html file and so on
+            status: new FormControl(this.currentBug.status, Validators.required),                  //'[]' provides an array of validators
+            severity: new FormControl(this.currentBug.severity, Validators.required),
+            description: new FormControl(this.currentBug.description, Validators.required)
         });*/
         this.bugForm = this.formBuilder.group({
             title: [this.currentBug.title, [forms_1.Validators.required, forbidden_string_validator_1.forbiddenStringValidator(/puppy/i)]],
@@ -72,10 +72,6 @@ var BugDetailComponent = (function () {
     BugDetailComponent.prototype.cleanBug = function () {
         this.currentBug = new bug_1.Bug(null, null, this.statuses.Logged, this.severities.Severe, null, null, null, null, null);
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], BugDetailComponent.prototype, "currentBug", void 0);
     BugDetailComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
