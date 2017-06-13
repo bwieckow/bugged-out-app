@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Bartek's Angular 2 Bug-out Project",
   "scripts": {
-    
+    "start": "node server.js",
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
   },
   "license": "UNLICENSED",
   "repository": {
