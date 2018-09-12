@@ -7,4 +7,5 @@ exports.FIREBASE_CONFIG = {
     storageBucket: "bugged-out-d4193.appspot.com",
     messagingSenderId: "264276093779"
 };
+exports.DATABASE_CONFIG = {};
 //# sourceMappingURL=constants.js.map

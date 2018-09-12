@@ -6,3 +6,6 @@ export const FIREBASE_CONFIG = {
     storageBucket: "bugged-out-d4193.appspot.com",
     messagingSenderId: "264276093779"
 };
+export const DATABASE_CONFIG = {
+
+};
