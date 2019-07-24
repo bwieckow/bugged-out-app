@@ -30,8 +30,7 @@ export class LoginComponent implements OnInit {
     }
 
     onSubmit() {
-
-        
+        this.loginService.authenticate(this.loginForm.value['email'], this.loginForm.value['password']);
     }
 
     ngOnInit() {
@@ -41,14 +40,14 @@ export class LoginComponent implements OnInit {
         });
     }
 
-    getAddedBugs() {
-        this.loginService.getAddedUsers()
-            .subscribe(user => {
-                this.users.push(user);
-            },
-                err => {
-                    console.error("Unable to get added users - ", err);
-                });
-    }
+    // getAddedBugs() {
+    //     this.loginService.getAddedUsers()
+    //         .subscribe(user => {
+    //             this.users.push(user);
+    //         },
+    //             err => {
+    //                 console.error("Unable to get added users - ", err);
+    //             });
+    // }
 
 }

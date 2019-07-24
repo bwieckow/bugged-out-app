@@ -24,20 +24,12 @@ var LoginComponent = (function () {
         this.router.navigate(['/register']);
     };
     LoginComponent.prototype.onSubmit = function () {
+        this.loginService.authenticate(this.loginForm.value['email'], this.loginForm.value['password']);
     };
     LoginComponent.prototype.ngOnInit = function () {
         this.loginForm = this.formBuilder.group({
             email: [''],
             password: ['']
-        });
-    };
-    LoginComponent.prototype.getAddedBugs = function () {
-        var _this = this;
-        this.loginService.getAddedUsers()
-            .subscribe(function (user) {
-            _this.users.push(user);
-        }, function (err) {
-            console.error("Unable to get added users - ", err);
         });
     };
     LoginComponent = __decorate([
