@@ -71,6 +71,6 @@ export class RegisterComponent implements OnInit {
     }
 
     updateUser() {
-        this.registerService.updateBug(this.currentUser);
+        this.registerService.updateUser(this.currentUser);
     }
 }

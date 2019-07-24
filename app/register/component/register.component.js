@@ -54,7 +54,7 @@ var RegisterComponent = (function () {
         this.registerService.addUser(this.currentUser);
     };
     RegisterComponent.prototype.updateUser = function () {
-        this.registerService.updateBug(this.currentUser);
+        this.registerService.updateUser(this.currentUser);
     };
     __decorate([
         core_1.Input(), 
