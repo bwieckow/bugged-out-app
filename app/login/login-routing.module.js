@@ -10,22 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var bug_list_component_1 = require('./bug-list/bug-list.component');
-var BugRoutingModule = (function () {
-    function BugRoutingModule() {
+var login_component_1 = require('./component/login.component');
+var register_component_1 = require('../register/component/register.component');
+var LoginRoutingModule = (function () {
+    function LoginRoutingModule() {
     }
-    BugRoutingModule = __decorate([
+    LoginRoutingModule = __decorate([
         core_1.NgModule({
             imports: [
                 router_1.RouterModule.forChild([
-                    { path: 'bugs', component: bug_list_component_1.BugListComponent }
+                    { path: '', redirectTo: 'login', pathMatch: 'prefix' },
+                    { path: 'login', component: login_component_1.LoginComponent },
+                    { path: 'register', component: register_component_1.RegisterComponent },
+                    { path: '**', redirectTo: 'login' } // in case if someone type ROOT_URL/kskdkmkmsd this route will handle this and redirect to default path. '**' means everything
                 ])
             ],
             exports: [router_1.RouterModule]
         }), 
         __metadata('design:paramtypes', [])
-    ], BugRoutingModule);
-    return BugRoutingModule;
+    ], LoginRoutingModule);
+    return LoginRoutingModule;
 }());
-exports.BugRoutingModule = BugRoutingModule;
-//# sourceMappingURL=bug-routing.module.js.map
+exports.LoginRoutingModule = LoginRoutingModule;
+//# sourceMappingURL=login-routing.module.js.map

@@ -10,22 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var bug_list_component_1 = require('./bug-list/bug-list.component');
-var BugRoutingModule = (function () {
-    function BugRoutingModule() {
+var register_component_1 = require('./component/register.component');
+var RegisterRoutingModule = (function () {
+    function RegisterRoutingModule() {
     }
-    BugRoutingModule = __decorate([
+    RegisterRoutingModule = __decorate([
         core_1.NgModule({
             imports: [
                 router_1.RouterModule.forChild([
-                    { path: 'bugs', component: bug_list_component_1.BugListComponent }
+                    { path: 'register', component: register_component_1.RegisterComponent },
                 ])
             ],
             exports: [router_1.RouterModule]
         }), 
         __metadata('design:paramtypes', [])
-    ], BugRoutingModule);
-    return BugRoutingModule;
+    ], RegisterRoutingModule);
+    return RegisterRoutingModule;
 }());
-exports.BugRoutingModule = BugRoutingModule;
-//# sourceMappingURL=bug-routing.module.js.map
+exports.RegisterRoutingModule = RegisterRoutingModule;
+//# sourceMappingURL=register-routing.module.js.map

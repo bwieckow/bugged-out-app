@@ -6,9 +6,8 @@ import { BugListComponent} from './bug-list/bug-list.component';
 @NgModule({
     imports: [
         RouterModule.forChild([
-            { path: '', redirectTo: 'bugs', pathMatch: 'prefix' },
-            { path: 'bugs', component: BugListComponent },
-            { path: '**', redirectTo: 'bugs' } // in case if someone type ROOT_URL/kskdkmkmsd this route will handle this and redirect to default path. '**' means everything
+            { path: 'bugs', component: BugListComponent }
+            //{ path: '**', redirectTo: 'bugs' } // in case if someone type ROOT_URL/kskdkmkmsd this route will handle this and redirect to default path. '**' means everything
         ])
     ],
     exports: [ RouterModule ]

@@ -11,60 +11,56 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var firebase_config_service_1 = require('../../core/service/firebase-config.service');
 var Observable_1 = require("rxjs/Observable");
-var BugService = (function () {
+var RegisterService = (function () {
     //brackets points to root
-    function BugService(fireService) {
+    function RegisterService(fireService) {
         this.fireService = fireService;
-        this.bugsDbRef = this.fireService.database.ref('/bugs'); //We can also do this *.ref().child('bugs') -- *ref() with empty
+        this.usersDbRef = this.fireService.database.ref('/users'); //We can also do this *.ref().child('bugs') -- *ref() with empty
     }
-    BugService.prototype.getAddedBugs = function () {
+    RegisterService.prototype.getAddedUsers = function () {
         var _this = this;
         return Observable_1.Observable.create(function (obs) {
-            _this.bugsDbRef.on('child_added', function (bug) {
-                var newBug = bug.val();
-                newBug.id = bug.key;
-                obs.next(newBug);
+            _this.usersDbRef.on('child_added', function (user) {
+                var newUser = user.val();
+                newUser.id = user.key;
+                obs.next(newUser);
             }, function (err) {
                 obs.throw(err);
             });
         });
     };
-    BugService.prototype.changedListener = function () {
+    RegisterService.prototype.changedListener = function () {
         var _this = this;
         return Observable_1.Observable.create(function (obs) {
-            _this.bugsDbRef.on('child_changed', function (bug) {
-                var updatedBug = bug.val();
-                updatedBug.id = bug.key;
-                obs.next(updatedBug);
+            _this.usersDbRef.on('child_changed', function (user) {
+                var updatedUser = user.val();
+                updatedUser.id = user.key;
+                obs.next(updatedUser);
             }, function (err) {
                 obs.throw(err);
             });
         });
     };
-    BugService.prototype.addBug = function (bug) {
-        var newBugRef = this.bugsDbRef.push();
-        newBugRef.set({
-            title: bug.title,
-            status: bug.status,
-            severity: bug.severity,
-            description: bug.description,
-            createdBy: 'Bartek',
-            createdDate: Date.now()
+    RegisterService.prototype.addUser = function (user) {
+        var newUserRef = this.usersDbRef.push();
+        newUserRef.set({
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
+            password: user.password
         })
-            .catch(function (err) { return console.error("Unable to add bug to firebase - ", err); });
+            .catch(function (err) { return console.error("Unable to add user to firebase - ", err); });
     };
-    BugService.prototype.updateBug = function (bug) {
-        var currentBugRef = this.bugsDbRef.child(bug.id);
-        bug.id = null;
-        bug.updatedBy = "Ryszard"; // TODO: In case having users
-        bug.updatedDate = Date.now();
-        currentBugRef.update(bug);
+    RegisterService.prototype.updateUser = function (user) {
+        var currentUserRef = this.usersDbRef.child(user.id);
+        user.id = null;
+        currentUserRef.update(user);
     };
-    BugService = __decorate([
+    RegisterService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [firebase_config_service_1.FirebaseConfigService])
-    ], BugService);
-    return BugService;
+    ], RegisterService);
+    return RegisterService;
 }());
-exports.BugService = BugService;
-//# sourceMappingURL=bug.service.js.map
+exports.RegisterService = RegisterService;
+//# sourceMappingURL=register.service.js.map
