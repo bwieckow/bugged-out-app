@@ -9,15 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var register_service_1 = require("../service/register.service");
-var user_1 = require('../../login/model/user');
+var user_1 = require('../../user/model/user');
 var forms_1 = require('@angular/forms');
 var router_1 = require('@angular/router');
+var user_service_1 = require('../../user/service/user.service');
 var RegisterComponent = (function () {
-    function RegisterComponent(formBuilder, router, registerService) {
+    function RegisterComponent(formBuilder, router, userService) {
         this.formBuilder = formBuilder;
         this.router = router;
-        this.registerService = registerService;
+        this.userService = userService;
         this.users = [];
         this.isWrongCredentials = true;
         this.isRegistered = false;
@@ -51,10 +51,10 @@ var RegisterComponent = (function () {
         }
     };
     RegisterComponent.prototype.addUser = function () {
-        this.registerService.addUser(this.currentUser);
+        this.userService.addUser(this.currentUser);
     };
     RegisterComponent.prototype.updateUser = function () {
-        this.registerService.updateUser(this.currentUser);
+        this.userService.updateUser(this.currentUser);
     };
     __decorate([
         core_1.Input(), 
@@ -67,7 +67,7 @@ var RegisterComponent = (function () {
             templateUrl: './register.component.html',
             styleUrls: ['./register.component.css']
         }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder, router_1.Router, register_service_1.RegisterService])
+        __metadata('design:paramtypes', [forms_1.FormBuilder, router_1.Router, user_service_1.UserService])
     ], RegisterComponent);
     return RegisterComponent;
 }());

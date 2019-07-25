@@ -6,10 +6,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 //Component
 import { LoginComponent } from './component/login.component';
-import { LoginService } from './service/login.service';
 import { RegisterModule } from '../register/register.module';
 
 //Service
+import { LoginService } from './service/login.service';
+import { UserService } from '../user/service/user.service';
 
 @NgModule({
     imports: [              //Imports are for Modules
@@ -24,7 +25,8 @@ import { RegisterModule } from '../register/register.module';
     ],
     exports: [ ],       //Exports let passing elements through
     providers: [            //Providers are for services
-        LoginService
+        LoginService,
+        UserService
     ]
 })
 

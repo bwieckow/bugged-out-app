@@ -10,16 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var firebase_config_service_1 = require('../../core/service/firebase-config.service');
-var Observable_1 = require("rxjs/Observable");
+var user_service_1 = require('../../user/service/user.service');
 var LoginService = (function () {
-    function LoginService(fireService) {
+    function LoginService(fireService, userServive) {
         var _this = this;
         this.fireService = fireService;
+        this.userServive = userServive;
         this.usersDbRef = this.fireService.database.ref('/users'); //We can also do this *.ref().child('bugs') -- *ref() with empty
         //brackets points to root
         this.users = [];
         this.isLogged = false;
-        this.getAddedUsers().subscribe(function (user) {
+        this.userServive.getUsers().subscribe(function (user) {
             _this.users.push(user);
         }, function (err) {
             console.error("Unable to get added users - ", err);
@@ -34,21 +35,9 @@ var LoginService = (function () {
         });
         return this.isLogged;
     };
-    LoginService.prototype.getAddedUsers = function () {
-        var _this = this;
-        return Observable_1.Observable.create(function (obs) {
-            _this.usersDbRef.on('child_added', function (user) {
-                var newUser = user.val();
-                newUser.id = user.key;
-                obs.next(newUser);
-            }, function (err) {
-                obs.throw(err);
-            });
-        });
-    };
     LoginService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [firebase_config_service_1.FirebaseConfigService])
+        __metadata('design:paramtypes', [firebase_config_service_1.FirebaseConfigService, user_service_1.UserService])
     ], LoginService);
     return LoginService;
 }());

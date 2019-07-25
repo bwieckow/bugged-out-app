@@ -16,7 +16,7 @@ var forms_1 = require('@angular/forms');
 //Component
 var register_component_1 = require('./component/register.component');
 //Service
-var register_service_1 = require('./service/register.service');
+var user_service_1 = require('../user/service/user.service');
 var RegisterModule = (function () {
     function RegisterModule() {
     }
@@ -33,7 +33,7 @@ var RegisterModule = (function () {
             ],
             exports: [],
             providers: [
-                register_service_1.RegisterService
+                user_service_1.UserService
             ]
         }), 
         __metadata('design:paramtypes', [])

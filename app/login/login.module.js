@@ -15,9 +15,10 @@ var login_routing_module_1 = require('./login-routing.module');
 var forms_1 = require('@angular/forms');
 //Component
 var login_component_1 = require('./component/login.component');
-var login_service_1 = require('./service/login.service');
 var register_module_1 = require('../register/register.module');
 //Service
+var login_service_1 = require('./service/login.service');
+var user_service_1 = require('../user/service/user.service');
 var LoginModule = (function () {
     function LoginModule() {
     }
@@ -35,7 +36,8 @@ var LoginModule = (function () {
             ],
             exports: [],
             providers: [
-                login_service_1.LoginService
+                login_service_1.LoginService,
+                user_service_1.UserService
             ]
         }), 
         __metadata('design:paramtypes', [])

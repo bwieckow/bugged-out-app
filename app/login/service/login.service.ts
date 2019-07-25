@@ -1,11 +1,7 @@
 import {Injectable} from '@angular/core';
 import {FirebaseConfigService} from '../../core/service/firebase-config.service';
-
-import {Observable} from "rxjs/Observable";
-
-import {User} from '../model/user';
-import {error} from "util";
-
+import {User} from '../../user/model/user';
+import { UserService } from '../../user/service/user.service';
 
 @Injectable()
 export class LoginService {
@@ -15,8 +11,8 @@ export class LoginService {
     private users: User[] = [];
     isLogged = false;
     
-    constructor(private fireService: FirebaseConfigService) {
-        this.getAddedUsers().subscribe(user => {
+    constructor(private fireService: FirebaseConfigService, private userServive: UserService) {
+        this.userServive.getUsers().subscribe(user => {
             this.users.push(user);
         },
         err => {
@@ -33,18 +29,4 @@ export class LoginService {
 
         return this.isLogged;
     }
-
-    getAddedUsers(): Observable<any> {
-        return Observable.create(obs => {
-            this.usersDbRef.on('child_added', user => {           //Here we are setting up the listener
-                    const newUser = user.val() as User;
-                    newUser.id = user.key;
-                    obs.next(newUser);
-                },
-                err => {
-                    obs.throw(err);
-                });
-        });
-    }
-
 }

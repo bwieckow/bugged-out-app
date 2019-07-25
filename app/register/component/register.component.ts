@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { RegisterService } from "../service/register.service";
-import { User } from '../../login/model/user';
+import { User } from '../../user/model/user';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from '@angular/router/src/utils/collection';
+import { UserService } from '../../user/service/user.service';
 
 @Component({
     moduleId: module.id,
@@ -14,7 +14,6 @@ import { first } from '@angular/router/src/utils/collection';
 
 export class RegisterComponent implements OnInit {
     private users: User[] = [];
-    //currentUser: User;
     registerForm: FormGroup;
     isWrongCredentials = true;
     isRegistered = false;
@@ -22,7 +21,7 @@ export class RegisterComponent implements OnInit {
 
     constructor(private formBuilder: FormBuilder,
         private router: Router,
-        private registerService: RegisterService) {
+        private userService: UserService) {
             
     }
 
@@ -67,10 +66,10 @@ export class RegisterComponent implements OnInit {
     }
 
     addUser() {
-        this.registerService.addUser(this.currentUser);
+        this.userService.addUser(this.currentUser);
     }
 
     updateUser() {
-        this.registerService.updateUser(this.currentUser);
+        this.userService.updateUser(this.currentUser);
     }
 }
