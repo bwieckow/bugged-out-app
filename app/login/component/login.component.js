@@ -19,12 +19,15 @@ var LoginComponent = (function () {
         this.loginService = loginService;
         this.users = [];
         this.isWrongCredentials = true;
+        this.isLogged = false;
     }
     LoginComponent.prototype.register = function () {
         this.router.navigate(['/register']);
     };
     LoginComponent.prototype.onSubmit = function () {
-        this.loginService.authenticate(this.loginForm.value['email'], this.loginForm.value['password']);
+        if (this.loginService.authenticate(this.loginForm.value['email'], this.loginForm.value['password'])) {
+            this.router.navigate(['/bugs']);
+        }
     };
     LoginComponent.prototype.ngOnInit = function () {
         this.loginForm = this.formBuilder.group({

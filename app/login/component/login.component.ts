@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
     currentUser: User;
     loginForm: FormGroup;
     isWrongCredentials = true;
+    isLogged = false;
 
 
     constructor(private formBuilder: FormBuilder,
@@ -26,11 +27,13 @@ export class LoginComponent implements OnInit {
     }
 
     register() {
-        this.router.navigate(['/register'])
+        this.router.navigate(['/register']);
     }
 
     onSubmit() {
-        this.loginService.authenticate(this.loginForm.value['email'], this.loginForm.value['password']);
+        if(this.loginService.authenticate(this.loginForm.value['email'], this.loginForm.value['password'])) {
+            this.router.navigate(['/bugs']);
+        }
     }
 
     ngOnInit() {
@@ -39,15 +42,4 @@ export class LoginComponent implements OnInit {
             password: ['']
         });
     }
-
-    // getAddedBugs() {
-    //     this.loginService.getAddedUsers()
-    //         .subscribe(user => {
-    //             this.users.push(user);
-    //         },
-    //             err => {
-    //                 console.error("Unable to get added users - ", err);
-    //             });
-    // }
-
 }

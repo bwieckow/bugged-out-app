@@ -19,7 +19,6 @@ var LoginService = (function () {
         //brackets points to root
         this.users = [];
         this.isLogged = false;
-        //TODO: subscribe should not be in service
         this.getAddedUsers().subscribe(function (user) {
             _this.users.push(user);
         }, function (err) {
@@ -29,12 +28,10 @@ var LoginService = (function () {
     LoginService.prototype.authenticate = function (email, password) {
         var _this = this;
         this.users.forEach(function (user) {
-            console.log(user);
             if (user.email == email && user.password == password) {
                 _this.isLogged = true;
             }
         });
-        console.log(this.isLogged);
         return this.isLogged;
     };
     LoginService.prototype.getAddedUsers = function () {

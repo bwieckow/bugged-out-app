@@ -16,7 +16,6 @@ export class LoginService {
     isLogged = false;
     
     constructor(private fireService: FirebaseConfigService) {
-        //TODO: subscribe should not be in service
         this.getAddedUsers().subscribe(user => {
             this.users.push(user);
         },
@@ -27,15 +26,10 @@ export class LoginService {
 
     authenticate(email: string, password: string): Boolean {
         this.users.forEach(user => {
-            console.log(user);
-            
             if (user.email == email && user.password == password) {
                 this.isLogged = true;
             }
-
-            
         });
-        console.log(this.isLogged);
 
         return this.isLogged;
     }
