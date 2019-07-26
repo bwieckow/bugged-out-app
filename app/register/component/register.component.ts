@@ -55,12 +55,12 @@ export class RegisterComponent implements OnInit {
             this.currentUser.email = this.registerForm.value["email"];
             this.currentUser.password = this.registerForm.value["password"];
     
-            if (this.currentUser.id) {
-                //this.updateUser();
-            } else {
+            if (!this.currentUser.id) {
                 this.addUser();
                 this.isRegistered = true;
                 this.router.navigate(['/login']);
+            } else {
+                //TODO: notification about existing user
             }
         
     }

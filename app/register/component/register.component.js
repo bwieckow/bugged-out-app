@@ -42,12 +42,12 @@ var RegisterComponent = (function () {
         this.currentUser.lastName = this.registerForm.value["lastName"];
         this.currentUser.email = this.registerForm.value["email"];
         this.currentUser.password = this.registerForm.value["password"];
-        if (this.currentUser.id) {
-        }
-        else {
+        if (!this.currentUser.id) {
             this.addUser();
             this.isRegistered = true;
             this.router.navigate(['/login']);
+        }
+        else {
         }
     };
     RegisterComponent.prototype.addUser = function () {
