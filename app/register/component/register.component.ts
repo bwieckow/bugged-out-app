@@ -68,8 +68,4 @@ export class RegisterComponent implements OnInit {
     addUser() {
         this.userService.addUser(this.currentUser);
     }
-
-    updateUser() {
-        this.userService.updateUser(this.currentUser);
-    }
 }

@@ -53,9 +53,6 @@ var RegisterComponent = (function () {
     RegisterComponent.prototype.addUser = function () {
         this.userService.addUser(this.currentUser);
     };
-    RegisterComponent.prototype.updateUser = function () {
-        this.userService.updateUser(this.currentUser);
-    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
