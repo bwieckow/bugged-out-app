@@ -11,21 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 //This is feature module
 var core_1 = require('@angular/core');
 var shared_module_1 = require('../shared/shared.module');
-var bug_routing_module_1 = require('./bug-routing.module');
+var projects_routing_module_1 = require('./projects-routing.module');
 var forms_1 = require('@angular/forms');
 //Component
-var bug_list_component_1 = require('./bug-list/bug-list.component');
-var bug_detail_component_1 = require('./bug-detail/bug-detail.component');
+var bug_list_component_1 = require('../bugs/bug-list/bug-list.component');
+var bug_detail_component_1 = require('../bugs/bug-detail/bug-detail.component');
 //Service
-var bug_service_1 = require('./service/bug.service');
-var BugModule = (function () {
-    function BugModule() {
+var bug_service_1 = require('../bugs/service/bug.service');
+var ProjectsModule = (function () {
+    function ProjectsModule() {
     }
-    BugModule = __decorate([
+    ProjectsModule = __decorate([
         core_1.NgModule({
             imports: [
                 shared_module_1.SharedModule,
-                bug_routing_module_1.BugRoutingModule,
+                projects_routing_module_1.ProjectsRoutingModule,
                 forms_1.ReactiveFormsModule
             ],
             declarations: [
@@ -38,8 +38,8 @@ var BugModule = (function () {
             ]
         }), 
         __metadata('design:paramtypes', [])
-    ], BugModule);
-    return BugModule;
+    ], ProjectsModule);
+    return ProjectsModule;
 }());
-exports.BugModule = BugModule;
-//# sourceMappingURL=bug.module.js.map
+exports.ProjectsModule = ProjectsModule;
+//# sourceMappingURL=projects.module.js.map

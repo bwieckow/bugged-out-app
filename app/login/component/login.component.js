@@ -26,7 +26,7 @@ var LoginComponent = (function () {
     };
     LoginComponent.prototype.onSubmit = function () {
         if (this.loginService.authenticate(this.loginForm.value['email'], this.loginForm.value['password'])) {
-            this.router.navigate(['/bugs']);
+            this.router.navigate(['/projects']);
         }
     };
     LoginComponent.prototype.ngOnInit = function () {
