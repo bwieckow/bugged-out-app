@@ -11,11 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 // Module
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-var bug_module_1 = require('./bugs/bug.module');
 var app_routing_module_1 = require('./app-routing.module');
 var core_module_1 = require('./core/core.module');
 var login_module_1 = require('./login/login.module');
 var register_module_1 = require('./register/register.module');
+var projects_module_1 = require('./projects/projects.module');
 //Component
 var app_component_1 = require('./app.component');
 var navbar_component_1 = require('./navbar/navbar.component');
@@ -26,7 +26,7 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                bug_module_1.BugModule,
+                projects_module_1.ProjectsModule,
                 app_routing_module_1.AppRoutingModule,
                 login_module_1.LoginModule,
                 register_module_1.RegisterModule,

@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
     onSubmit() {
         if(this.loginService.authenticate(this.loginForm.value['email'], this.loginForm.value['password'])) {
-            this.router.navigate(['/bugs']);
+            this.router.navigate(['/projects']);
         }
     }
 
