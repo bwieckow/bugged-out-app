@@ -16,8 +16,10 @@ var forms_1 = require('@angular/forms');
 //Component
 var bug_list_component_1 = require('../bugs/bug-list/bug-list.component');
 var bug_detail_component_1 = require('../bugs/bug-detail/bug-detail.component');
+var project_dropdown_component_1 = require('./component/project-dropdown.component');
 //Service
 var bug_service_1 = require('../bugs/service/bug.service');
+var project_service_1 = require('./service/project.service');
 var ProjectsModule = (function () {
     function ProjectsModule() {
     }
@@ -30,11 +32,13 @@ var ProjectsModule = (function () {
             ],
             declarations: [
                 bug_list_component_1.BugListComponent,
-                bug_detail_component_1.BugDetailComponent
+                bug_detail_component_1.BugDetailComponent,
+                project_dropdown_component_1.ProjectDropdownComponent
             ],
             exports: [],
             providers: [
-                bug_service_1.BugService
+                bug_service_1.BugService,
+                project_service_1.ProjectService
             ]
         }), 
         __metadata('design:paramtypes', [])

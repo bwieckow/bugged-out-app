@@ -6,7 +6,8 @@ nav {
 }
 #nav-dropdown {
     color: #FFF;
+    border-color: #FFF;
 }
-.dropdown-menu {
-    border-radius: 0;
+.dropdown-menu:focus {
+    /* border-radius: 0; */
 }

@@ -7,9 +7,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 //Component
 import { BugListComponent } from '../bugs/bug-list/bug-list.component';
 import { BugDetailComponent } from '../bugs/bug-detail/bug-detail.component';
+import { ProjectDropdownComponent } from './component/project-dropdown.component';
 
 //Service
 import { BugService } from '../bugs/service/bug.service';
+import { ProjectService } from './service/project.service';
 
 @NgModule({
     imports: [              //Imports are for Modules
@@ -19,11 +21,13 @@ import { BugService } from '../bugs/service/bug.service';
     ],
     declarations: [         //Declarations are for components and thing related to layout
         BugListComponent,
-        BugDetailComponent
+        BugDetailComponent,
+        ProjectDropdownComponent
     ],
     exports: [ ],       //Exports let passing elements through
     providers: [            //Providers are for services
-        BugService
+        BugService,
+        ProjectService
     ]
 })
 
