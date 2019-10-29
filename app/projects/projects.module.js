@@ -20,6 +20,7 @@ var project_dropdown_component_1 = require('./component/project-dropdown.compone
 //Service
 var bug_service_1 = require('../bugs/service/bug.service');
 var project_service_1 = require('./service/project.service');
+var project_detail_component_1 = require('./project-detail/project-detail.component');
 var ProjectsModule = (function () {
     function ProjectsModule() {
     }
@@ -33,7 +34,8 @@ var ProjectsModule = (function () {
             declarations: [
                 bug_list_component_1.BugListComponent,
                 bug_detail_component_1.BugDetailComponent,
-                project_dropdown_component_1.ProjectDropdownComponent
+                project_dropdown_component_1.ProjectDropdownComponent,
+                project_detail_component_1.ProjectDetailComponent
             ],
             exports: [],
             providers: [

@@ -17,6 +17,8 @@ var ProjectDropdownComponent = (function () {
     }
     ProjectDropdownComponent.prototype.ngOnInit = function () {
     };
+    ProjectDropdownComponent.prototype.addProject = function () {
+    };
     ProjectDropdownComponent.prototype.getUserProjects = function () {
         // this.projectService.getAddedProjects()
         //     .subscribe(bug => {

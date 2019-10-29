@@ -6,7 +6,7 @@ import { ProjectService } from '../service/project.service';
     moduleId: module.id,
     selector: 'project-dropdown',
     templateUrl: 'project-dropdown.component.html',
-    styleUrls: [ 'project-dropdown.component.css' ]
+    styleUrls: ['project-dropdown.component.css']
 })
 
 export class ProjectDropdownComponent implements OnInit {
@@ -21,6 +21,9 @@ export class ProjectDropdownComponent implements OnInit {
 
     }
 
+    addProject() {
+
+    }
 
     getUserProjects() {
         // this.projectService.getAddedProjects()
