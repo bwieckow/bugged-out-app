@@ -1,10 +1,11 @@
 <div class="row">
     <div class="col-xs-6">
-        <project-dropdown></project-dropdown>
+        <project-dropdown #projectDropdown></project-dropdown>
         <h1>Logged Bugs</h1>
     </div>
     <div class="col-xs-6 text-xs-right">
-        <button class="btn btn-success btn-lg" [attr.data-target]=" '#' + bugDetail.modalId" data-toggle="modal" (click)="bugDetail.freshForm()"><i class="fa fa-plus" aria-hidden="true"></i>Add Bug</button>
+        <button class="btn btn-success btn-lg" [attr.data-target]=" '#' + bugDetail.modalId" data-toggle="modal"
+            (click)="bugDetail.freshForm()"><i class="fa fa-plus" aria-hidden="true"></i>Add Bug</button>
     </div>
 </div>
 <div class="row">
@@ -21,7 +22,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let bug of bugs" [attr.data-target]=" '#' + bugDetail.modalId" data-toggle="modal" (click)="bugDetail.configureForm(bug)">
+                <tr *ngFor="let bug of bugs" [attr.data-target]=" '#' + bugDetail.modalId" data-toggle="modal"
+                    (click)="bugDetail.configureForm(bug, projectDropdown.projectId)">
                     <td>{{ bug.title }}</td>
                     <td>{{ bug.status | status}}</td>
                     <td>{{ bug.severity | severity }}</td>

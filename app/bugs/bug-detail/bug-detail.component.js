@@ -19,6 +19,7 @@ var BugDetailComponent = (function () {
         this.formBuilder = formBuilder;
         this.bugService = bugService;
         this.modalId = "bugModal";
+        this.projectId = "";
         this.statuses = constants_1.STATUS;
         this.severities = constants_1.SEVERITY;
         this.statusArr = [];
@@ -30,7 +31,7 @@ var BugDetailComponent = (function () {
         this.severityArr = Object.keys(this.severities).filter(Number); // *.filter(Number) takes only those which are type of number - so first 5 in this case
         this.configureForm();
     };
-    BugDetailComponent.prototype.configureForm = function (bug) {
+    BugDetailComponent.prototype.configureForm = function (bug, projectId) {
         if (bug) {
             this.currentBug = new bug_1.Bug(bug.id, bug.title, bug.status, bug.severity, bug.description, bug.createdBy, bug.createdDate, bug.updatedBy, bug.updatedDate);
         }
@@ -46,6 +47,11 @@ var BugDetailComponent = (function () {
             severity: [this.currentBug.severity, forms_1.Validators.required],
             description: [this.currentBug.description, [forms_1.Validators.required]]
         });
+        console.log("BUG FORM");
+        if (projectId) {
+            this.projectId = projectId;
+            console.log(projectId);
+        }
     };
     BugDetailComponent.prototype.submitForm = function () {
         this.currentBug.title = this.bugForm.value["title"];
@@ -56,11 +62,21 @@ var BugDetailComponent = (function () {
             this.updateBug();
         }
         else {
-            this.addBug();
+            console.log(this.projectId);
+            if (this.projectId == "") {
+                this.addBug();
+            }
+            else {
+                console.log("ADDED BUG TO PROJECT " + this.projectId);
+                this.addBugToProject();
+            }
         }
     };
     BugDetailComponent.prototype.addBug = function () {
         this.bugService.addBug(this.currentBug);
+    };
+    BugDetailComponent.prototype.addBugToProject = function () {
+        this.bugService.addBugToProject(this.currentBug, this.projectId);
     };
     BugDetailComponent.prototype.updateBug = function () {
         this.bugService.updateBug(this.currentBug);

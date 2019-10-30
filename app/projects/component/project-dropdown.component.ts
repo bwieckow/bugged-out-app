@@ -14,6 +14,7 @@ export class ProjectDropdownComponent implements OnInit {
     private projects: Project[] = [];
     private dropdownBtn: string = "Select project";
     private projectDesc: string = "";
+    private projectId: string = "";
 
     constructor(private projectService: ProjectService) {
 
@@ -32,6 +33,9 @@ export class ProjectDropdownComponent implements OnInit {
                 err => {
                     console.error("Unable to get added bugs - ", err);
                 });
+        console.log("PROJECTS: ")
+        console.log(this.projects)
+
     }
 
     getUserProjects() {
@@ -61,5 +65,6 @@ export class ProjectDropdownComponent implements OnInit {
     selectProject(project: Project) {
         this.dropdownBtn = project.name;
         this.projectDesc = project.description;
+        this.projectId = project.id;
     }
 }

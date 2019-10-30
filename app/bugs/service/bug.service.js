@@ -12,10 +12,11 @@ var core_1 = require('@angular/core');
 var firebase_config_service_1 = require('../../core/service/firebase-config.service');
 var Observable_1 = require("rxjs/Observable");
 var BugService = (function () {
-    //brackets points to root
     function BugService(fireService) {
         this.fireService = fireService;
         this.bugsDbRef = this.fireService.database.ref('/bugs'); //We can also do this *.ref().child('bugs') -- *ref() with empty
+        //brackets points to root
+        this.projectBugsDbRef = null;
     }
     BugService.prototype.getAddedBugs = function () {
         var _this = this;
@@ -41,6 +42,19 @@ var BugService = (function () {
             });
         });
     };
+    BugService.prototype.addBugToProject = function (bug, projectId) {
+        this.projectBugsDbRef = this.fireService.database.ref('/projects/' + projectId + '/bugs');
+        var newBugRef = this.projectBugsDbRef.push();
+        newBugRef.set({
+            title: bug.title,
+            status: bug.status,
+            severity: bug.severity,
+            description: bug.description,
+            createdBy: 'Bartek',
+            createdDate: Date.now()
+        })
+            .catch(function (err) { return console.error("Unable to add bug to firebase - ", err); });
+    };
     BugService.prototype.addBug = function (bug) {
         var newBugRef = this.bugsDbRef.push();
         newBugRef.set({
@@ -53,8 +67,12 @@ var BugService = (function () {
         })
             .catch(function (err) { return console.error("Unable to add bug to firebase - ", err); });
     };
-    BugService.prototype.updateBug = function (bug) {
+    BugService.prototype.updateBug = function (bug, projectId) {
         var currentBugRef = this.bugsDbRef.child(bug.id);
+        if (projectId) {
+            this.projectBugsDbRef = this.fireService.database.ref('/projects/' + projectId + '/bugs');
+            currentBugRef = this.projectBugsDbRef.child(bug.id);
+        }
         bug.id = null;
         bug.updatedBy = "Ryszard"; // TODO: In case having users
         bug.updatedDate = Date.now();

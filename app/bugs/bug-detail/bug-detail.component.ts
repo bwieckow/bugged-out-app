@@ -1,10 +1,10 @@
-import {Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 import { BugService } from '../service/bug.service';
 
-import {Bug} from "../model/bug";
-import {STATUS, SEVERITY} from '../../shared/constant/constants';
+import { Bug } from "../model/bug";
+import { STATUS, SEVERITY } from '../../shared/constant/constants';
 
 import { forbiddenStringValidator } from '../../shared/validation/forbidden-string.validator';
 
@@ -12,12 +12,13 @@ import { forbiddenStringValidator } from '../../shared/validation/forbidden-stri
     moduleId: module.id,
     selector: 'bug-detail',
     templateUrl: 'bug-detail.component.html',
-    styleUrls: [ 'bug-detail.component.css' ]
+    styleUrls: ['bug-detail.component.css']
 })
 
-export class BugDetailComponent implements OnInit{
+export class BugDetailComponent implements OnInit {
     private modalId = "bugModal";
     private bugForm: FormGroup;
+    private projectId: string = "";
     private statuses = STATUS;
     private severities = SEVERITY;
     private statusArr: string[] = [];
@@ -34,7 +35,7 @@ export class BugDetailComponent implements OnInit{
         this.configureForm();
     }
 
-    configureForm(bug?: Bug) {                                                       //This is a reactive form creating
+    configureForm(bug?: Bug, projectId?: string) {                                                       //This is a reactive form creating
         if (bug) {
             this.currentBug = new Bug(
                 bug.id,
@@ -61,6 +62,12 @@ export class BugDetailComponent implements OnInit{
             severity: [this.currentBug.severity, Validators.required],
             description: [this.currentBug.description, [Validators.required]]
         });
+
+        console.log("BUG FORM");
+        if (projectId) {
+            this.projectId = projectId;
+            console.log(projectId);
+        }
     }
 
     submitForm() {
@@ -72,7 +79,13 @@ export class BugDetailComponent implements OnInit{
         if (this.currentBug.id) {
             this.updateBug();
         } else {
-            this.addBug();
+            console.log(this.projectId)
+            if (this.projectId == "") {
+                this.addBug();
+            } else {
+                console.log("ADDED BUG TO PROJECT " + this.projectId)
+                this.addBugToProject();
+            }
         }
     }
 
@@ -80,12 +93,16 @@ export class BugDetailComponent implements OnInit{
         this.bugService.addBug(this.currentBug);
     }
 
+    addBugToProject() {
+        this.bugService.addBugToProject(this.currentBug, this.projectId)
+    }
+
     updateBug() {
         this.bugService.updateBug(this.currentBug);
     }
 
     freshForm() {
-        this.bugForm.reset({ status: this.statuses.Logged, severity: this.severities.Severe});  //Only 'reset()' will reset all values, although severity and status which we dont want to
+        this.bugForm.reset({ status: this.statuses.Logged, severity: this.severities.Severe });  //Only 'reset()' will reset all values, although severity and status which we dont want to
         this.cleanBug();
     }
 

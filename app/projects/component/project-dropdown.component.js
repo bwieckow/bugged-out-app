@@ -16,6 +16,7 @@ var ProjectDropdownComponent = (function () {
         this.projects = [];
         this.dropdownBtn = "Select project";
         this.projectDesc = "";
+        this.projectId = "";
     }
     ProjectDropdownComponent.prototype.ngOnInit = function () {
         this.getAddedProjects();
@@ -29,6 +30,8 @@ var ProjectDropdownComponent = (function () {
         }, function (err) {
             console.error("Unable to get added bugs - ", err);
         });
+        console.log("PROJECTS: ");
+        console.log(this.projects);
     };
     ProjectDropdownComponent.prototype.getUserProjects = function () {
         // this.projectService.getAddedProjects()
@@ -55,6 +58,7 @@ var ProjectDropdownComponent = (function () {
     ProjectDropdownComponent.prototype.selectProject = function (project) {
         this.dropdownBtn = project.name;
         this.projectDesc = project.description;
+        this.projectId = project.id;
     };
     ProjectDropdownComponent = __decorate([
         core_1.Component({
