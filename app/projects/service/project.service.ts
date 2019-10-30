@@ -1,25 +1,34 @@
-import {Injectable} from '@angular/core';
-import {FirebaseConfigService} from '../../core/service/firebase-config.service';
+import { Injectable } from '@angular/core';
+import { FirebaseConfigService } from '../../core/service/firebase-config.service';
 
-import {Observable} from "rxjs/Observable";
+import { Observable } from "rxjs/Observable";
 import { Project } from '../model/project';
 
 @Injectable()
 export class ProjectService {
 
     private projectsDbRef = this.fireService.database.ref('/projects'); //We can also do this *.ref().child('bugs') -- *ref() with empty
-                                                                //brackets points to root
+    //brackets points to root
 
     constructor(private fireService: FirebaseConfigService) {
 
     }
 
     getAddedProjects() {
-       
+        return Observable.create(obs => {
+            this.projectsDbRef.on('child_added', project => {           //Here we are setting up the listener
+                const newProj = project.val() as Project;
+                newProj.id = project.key;
+                obs.next(newProj);
+            },
+                err => {
+                    obs.throw(err);
+                });
+        });
     }
 
     changedListener() {
-        
+
     }
 
     addProject(project: Project) {
@@ -31,7 +40,7 @@ export class ProjectService {
             owner: 'Bartek',
             createdDate: Date.now()
         })
-        .catch(err => console.error("Unable to add bug to firebase - ", err));
+            .catch(err => console.error("Unable to add bug to firebase - ", err));
     }
 
     updateProject(project: Project) {

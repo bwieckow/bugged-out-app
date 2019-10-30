@@ -12,17 +12,26 @@ import { ProjectService } from '../service/project.service';
 export class ProjectDropdownComponent implements OnInit {
 
     private projects: Project[] = [];
+    private dropdownBtn: string = "Select project";
+    private projectDesc: string = "";
 
     constructor(private projectService: ProjectService) {
 
     }
 
     ngOnInit() {
-
+        this.getAddedProjects();
+        this.getUpdatedProjects();
     }
 
-    addProject() {
-
+    getAddedProjects() {
+        this.projectService.getAddedProjects()
+            .subscribe(project => {
+                this.projects.push(project);
+            },
+                err => {
+                    console.error("Unable to get added bugs - ", err);
+                });
     }
 
     getUserProjects() {
@@ -35,7 +44,7 @@ export class ProjectDropdownComponent implements OnInit {
         //     });
     }
 
-    getUpdatedBugs() {
+    getUpdatedProjects() {
         // this.projectService.changedListener()
         //     .subscribe(updatedProject => {
         //         //BELOW: we are trying to get an index for the bug that matches our updated bug based on id value
@@ -47,5 +56,10 @@ export class ProjectDropdownComponent implements OnInit {
         //     err => {
         //         console.error("Unable to get project bug - ", err);
         //     });
+    }
+
+    selectProject(project: Project) {
+        this.dropdownBtn = project.name;
+        this.projectDesc = project.description;
     }
 }

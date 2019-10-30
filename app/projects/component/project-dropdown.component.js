@@ -14,10 +14,21 @@ var ProjectDropdownComponent = (function () {
     function ProjectDropdownComponent(projectService) {
         this.projectService = projectService;
         this.projects = [];
+        this.dropdownBtn = "Select project";
+        this.projectDesc = "";
     }
     ProjectDropdownComponent.prototype.ngOnInit = function () {
+        this.getAddedProjects();
+        this.getUpdatedProjects();
     };
-    ProjectDropdownComponent.prototype.addProject = function () {
+    ProjectDropdownComponent.prototype.getAddedProjects = function () {
+        var _this = this;
+        this.projectService.getAddedProjects()
+            .subscribe(function (project) {
+            _this.projects.push(project);
+        }, function (err) {
+            console.error("Unable to get added bugs - ", err);
+        });
     };
     ProjectDropdownComponent.prototype.getUserProjects = function () {
         // this.projectService.getAddedProjects()
@@ -28,7 +39,7 @@ var ProjectDropdownComponent = (function () {
         //         console.error("Unable to get added bugs - ", err);
         //     });
     };
-    ProjectDropdownComponent.prototype.getUpdatedBugs = function () {
+    ProjectDropdownComponent.prototype.getUpdatedProjects = function () {
         // this.projectService.changedListener()
         //     .subscribe(updatedProject => {
         //         //BELOW: we are trying to get an index for the bug that matches our updated bug based on id value
@@ -40,6 +51,10 @@ var ProjectDropdownComponent = (function () {
         //     err => {
         //         console.error("Unable to get project bug - ", err);
         //     });
+    };
+    ProjectDropdownComponent.prototype.selectProject = function (project) {
+        this.dropdownBtn = project.name;
+        this.projectDesc = project.description;
     };
     ProjectDropdownComponent = __decorate([
         core_1.Component({

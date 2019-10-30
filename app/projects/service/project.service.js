@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var firebase_config_service_1 = require('../../core/service/firebase-config.service');
+var Observable_1 = require("rxjs/Observable");
 var ProjectService = (function () {
     //brackets points to root
     function ProjectService(fireService) {
@@ -17,6 +18,16 @@ var ProjectService = (function () {
         this.projectsDbRef = this.fireService.database.ref('/projects'); //We can also do this *.ref().child('bugs') -- *ref() with empty
     }
     ProjectService.prototype.getAddedProjects = function () {
+        var _this = this;
+        return Observable_1.Observable.create(function (obs) {
+            _this.projectsDbRef.on('child_added', function (project) {
+                var newProj = project.val();
+                newProj.id = project.key;
+                obs.next(newProj);
+            }, function (err) {
+                obs.throw(err);
+            });
+        });
     };
     ProjectService.prototype.changedListener = function () {
     };
